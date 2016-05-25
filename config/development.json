@@ -1,0 +1,11 @@
+{
+  "source_jira" : {
+    "username" : "",
+    "password" : ""
+  },
+  "destination_jira" : {
+    "username" : "",
+    "password" : ""
+  },
+  "username_map" : {}
+}
