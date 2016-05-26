@@ -1,9 +1,11 @@
 {
   "source_jira" : {
+    "server": "",
     "username" : "",
     "password" : ""
   },
   "destination_jira" : {
+    "server": "",
     "username" : "",
     "password" : ""
   },
