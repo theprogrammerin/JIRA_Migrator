@@ -11,7 +11,21 @@ load_project 'lib/jira_migrator/config.rb'
 
 $config = JIRAMigrator::Config.new
 
+#Configure rest clients
 
-SOURCE_CLIENT = JIRA_Client.new("https://tinyowl.atlassian.net", "ashutosh:Ashu@2609")
-DESTINATION_CLIENT = JIRA_Client.new("https://roadrunnr.atlassian.net", "ashutosh.agrawal:Ashu@2609")
+load_project 'lib/jira_migrator/rest_client.rb'
+
+$source_client =
+  JIRA_Client.new(
+    $config["source"]["server"],
+    "#{$config["source"]["username"]}:#{$config["source"]["password"]}")
+
+$destination_client =
+  JIRA_Client.new(
+    $config["destination"]["server"],
+    "#{$config["destination"]["username"]}:#{$config["destination"]["password"]}")
+
+$user_mapping = JIRAMigrator::UserMap.new
+
+
 
