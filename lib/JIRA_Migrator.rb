@@ -27,5 +27,5 @@ $destination_client =
 
 $user_mapping = JIRAMigrator::UserMap.new
 
-
+JIRAMigrator::GenerateCSV.new.generate
 
